@@ -6,4 +6,3 @@ Unity Game where the main character must climbs whats left of the cathedral of l
 
 ## estimated completion: april 2025
 
-#test
