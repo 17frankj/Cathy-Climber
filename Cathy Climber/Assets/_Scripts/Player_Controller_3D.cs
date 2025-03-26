@@ -61,7 +61,7 @@ public class Player_Controller_3D : MonoBehaviour
 
     private void PlayerJumping()
     {
-        if(Input.GetButtonDown("Jump") && !CheckGround())
+        if(Input.GetButtonDown("Jump") && CheckGround())
         {
             Debug.Log("Jump Pressed");
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
@@ -70,11 +70,8 @@ public class Player_Controller_3D : MonoBehaviour
 
     private bool CheckGround()
     {
-        RaycastHit2D hit;
-
-        hit = Physics2D.Raycast(foot.position, Vector2.down, groundDistance, groundLayer);
-        
-        return hit;
+        Debug.DrawRay(foot.position, Vector2.down * groundDistance, Color.green);
+        return Physics.Raycast(foot.position, Vector2.down, groundDistance, groundLayer);
     }
 
     // run animation
