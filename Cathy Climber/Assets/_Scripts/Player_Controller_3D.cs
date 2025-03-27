@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UIElements;
 
 public class Player_Controller_3D : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Player_Controller_3D : MonoBehaviour
 
     // Jumping
     [SerializeField] private float jumpForce = 5.0f;
-    [SerializeField] private float groundDistance = 0.5f; // check distance for ground
+    [SerializeField] private float groundDistance = 1f; // check distance for ground
     [SerializeField] private LayerMask groundLayer;  // mask to detect ground
     [SerializeField] private Transform foot; // foot of player
 
@@ -61,30 +62,30 @@ public class Player_Controller_3D : MonoBehaviour
 
     private void PlayerJumping()
     {
-        if(Input.GetButtonDown("Jump") && CheckGround())
+        if(Input.GetButtonDown("Jump") && isGrounded())
         {
             Debug.Log("Jump Pressed");
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         }
     }
 
-    private bool CheckGround()
+    private bool isGrounded()
     {
         Debug.DrawRay(foot.position, Vector2.down * groundDistance, Color.green);
-        return Physics.Raycast(foot.position, Vector2.down, groundDistance, groundLayer);
+        return Physics.Raycast(foot.position, Vector2.down, groundDistance);
     }
 
     // run animation
     private void RunAnimation()
     {
         // player standing still
-        if((rb.linearVelocity.magnitude < 0.1f) && !CheckGround())
+        if((rb.linearVelocity.magnitude < 0.1f) && isGrounded())
         {
             anim.SetBool("isRunning", false);
             anim.SetBool("isJumping", false);
         }
         // player running on ground
-        else if((rb.linearVelocity.magnitude > 0.1f) && !CheckGround())
+        else if((rb.linearVelocity.magnitude > 0.1f) && isGrounded())
         {
             // player on ground and running 
             anim.SetBool("isJumping", false);
