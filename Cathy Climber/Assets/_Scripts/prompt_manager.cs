@@ -8,18 +8,6 @@ public class prompt_manager : MonoBehaviour
     [SerializeField] GameObject Canvas;
     public static int tracker = 0;
    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         switch(tracker)
