@@ -6,6 +6,7 @@ public class prompt_manager : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject Canvas;
+    [SerializeField] GameObject NPC;
     public static int tracker = 0;
    
     void OnCollisionEnter(Collision collision)
@@ -52,6 +53,7 @@ public class prompt_manager : MonoBehaviour
             Canvas.transform.GetChild(0).gameObject.SetActive(false); // turn off first tutorial message
             tracker++;
             gameObject.SetActive(false); // turn off trigger;
+            NPC.SetActive(false); // turn off NPC
         }
     }
 }
