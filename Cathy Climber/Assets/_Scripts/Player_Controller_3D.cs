@@ -64,6 +64,7 @@ public class Player_Controller_3D : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && isGrounded())
         {
+            anim.SetBool("isJumping", true);
             //Debug.Log("Jump Pressed");
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         }
@@ -84,19 +85,22 @@ public class Player_Controller_3D : MonoBehaviour
             anim.SetBool("isRunning", false);
             anim.SetBool("isJumping", false);
         }
+        
         // player running on ground
-        else if((rb.linearVelocity.magnitude > 0.1f) && isGrounded())
+        else if((rb.linearVelocity.x > 0.1f) || (rb.linearVelocity.z > 0.1f) && isGrounded())
         {
             // player on ground and running 
-            anim.SetBool("isJumping", false);
+            //anim.SetBool("isJumping", false);
             anim.SetBool("isRunning", true);
-            
         }
-        // player in air but running
+        
+        /*
+        // player in air 
         else
         {
             anim.SetBool("isJumping", true);
             anim.SetBool("isRunning", false);
         }
+        */
     }
 }
