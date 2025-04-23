@@ -64,7 +64,7 @@ public class Player_Controller_3D : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && isGrounded())
         {
-            Debug.Log("Jump Pressed");
+            //Debug.Log("Jump Pressed");
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         }
     }
