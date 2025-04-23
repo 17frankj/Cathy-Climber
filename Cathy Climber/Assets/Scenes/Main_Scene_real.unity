@@ -61996,7 +61996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 688070444}
-  mainScene: Main_Scene_real
+  mainScene: Main_Scene
   tutorial: 
 --- !u!1001 &1605272641
 PrefabInstance:
