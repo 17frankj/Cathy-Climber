@@ -23,6 +23,9 @@ public class CheckPoint_Manager_main_level : MonoBehaviour
             case 1:
                 ActivateSecondCheckPoint();
                 return;
+            case 2:
+                ActivateThirdCheckPoint();
+                return;
             default:
                 return;
         }
@@ -39,6 +42,15 @@ public class CheckPoint_Manager_main_level : MonoBehaviour
     private void ActivateSecondCheckPoint()
     {
         if(two_active == true)
+        {
+            currentCheckpoint_main_level++; // proceed to next checkpoint
+            source.Play();
+        }
+    }
+
+    private void ActivateThirdCheckPoint()
+    {
+        if(three_active == true)
         {
             currentCheckpoint_main_level++; // proceed to next checkpoint
             source.Play();

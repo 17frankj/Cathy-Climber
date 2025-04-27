@@ -7,10 +7,12 @@ public class DeathManager_main_level : MonoBehaviour
     [SerializeField] private Vector3 startingPosition;
     [SerializeField] private Vector3 FirstCheckPointPosition;
     [SerializeField] private Vector3 SecondCheckPointPosition;
+    [SerializeField] private Vector3 ThirdCheckPointPosition;
 
     void FixedUpdate()
     {
         SecondWorld();
+        ThirdWorld();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -49,6 +51,14 @@ public class DeathManager_main_level : MonoBehaviour
         if(CheckPoint_Manager_main_level.two_active == true && player.transform.position.y < 15 )
         {
             player.transform.position = SecondCheckPointPosition;
+        }
+    }
+
+    private void ThirdWorld()
+    {
+        if(CheckPoint_Manager_main_level.three_active == true && player.transform.position.y < 33 )
+        {
+            player.transform.position = ThirdCheckPointPosition;
         }
     }
 }
