@@ -1,5 +1,5 @@
-using System.Runtime.CompilerServices;
-using UnityEditor.Experimental.GraphView;
+//using System.Runtime.CompilerServices;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering.Universal;
@@ -47,11 +47,20 @@ public class Player_Controller_3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckExit();
         StateHandler();
         PlayerMoving();
         PlayerJumping();
         UpdatePlayerRotation();
         RunAnimation();
+    }
+
+    private void CheckExit()
+    {
+        if(Input.GetButtonDown("Exit"))
+        {
+            Application.Quit();
+        }
     }
 
     private void UpdatePlayerRotation()
@@ -89,7 +98,6 @@ public class Player_Controller_3D : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded() && angle < 60)
         {
             //anim.SetBool("isJumping", true);
-            //Debug.Log("Jump Pressed");
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         }
     }
@@ -137,6 +145,7 @@ public class Player_Controller_3D : MonoBehaviour
         else
         {
             state = MovementState.air;
+
         }
     }
 

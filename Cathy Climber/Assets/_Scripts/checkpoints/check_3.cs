@@ -2,15 +2,8 @@ using UnityEngine;
 
 public class check_3 : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        CheckPoint_Manager_main_level.three_active = true;
     }
 }

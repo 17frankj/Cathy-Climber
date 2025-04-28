@@ -15829,7 +15829,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 90
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -15856,7 +15856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399093902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.134778, y: 0.18732345, z: -0.025956685, w: 0.97266185}
+  m_LocalRotation: {x: 0.0049672355, y: 0.15282694, z: -0.0007681602, w: 0.9882402}
   m_LocalPosition: {x: 43.890762, y: 15.79, z: 29.892296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25920,7 +25920,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -25946,7 +25946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647536030}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.134778, y: 0.18732345, z: -0.025956687, w: 0.97266185}
+  m_LocalRotation: {x: 0.004967235, y: 0.15282694, z: -0.00076816074, w: 0.9882402}
   m_LocalPosition: {x: 43.890762, y: 15.79, z: 29.892296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27769,14 +27769,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  rotationSpeed: 25
-  jumpForce: 4
+  sprintSpeed: 4
+  walkSpeed: 3
+  rotationSpeed: 30
+  jumpForce: 4.6
   groundDistance: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   foot: {fileID: 837010921}
+  maxSlopeAngle: 70
+  orientation: {fileID: 688070446}
+  angle: 0
   anim: {fileID: 688070445}
+  state: 0
 --- !u!54 &688070448
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27811,7 +27817,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688070444}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a29dc32d3c811bc41a1704c284576e0e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -63087,8 +63093,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 688070444}
-  mainScene: Main_Scene_real
+  mainScene: Main_Scene
   tutorial: 
+  OtherMainScene: 
 --- !u!1001 &1605272641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65777,8 +65784,8 @@ Transform:
   m_GameObject: {fileID: 1676747869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.642, y: 7.95, z: 94.977}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 40.4821, y: 7.95, z: 95.2489}
+  m_LocalScale: {x: 3.3198, y: 1, z: 1.5438}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

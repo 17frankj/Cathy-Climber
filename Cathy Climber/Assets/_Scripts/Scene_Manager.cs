@@ -9,6 +9,7 @@ public class Scene_Manager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] String mainScene;
     [SerializeField] String tutorial;
+    [SerializeField] String OtherMainScene;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -22,6 +23,11 @@ public class Scene_Manager : MonoBehaviour
     private void LoadMainLevel()
     {
         SceneManager.LoadSceneAsync(mainScene);
+    }
+
+    public void LoadOtherMainLevel()
+    {
+        SceneManager.LoadSceneAsync(OtherMainScene);
     }
 
 }

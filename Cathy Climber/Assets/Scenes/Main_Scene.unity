@@ -824,6 +824,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505628615}
   m_CullTransparentMesh: 1
+--- !u!1 &1567090992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567090995}
+  - component: {fileID: 1567090994}
+  - component: {fileID: 1567090993}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1567090993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567090992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 8c5ae8f3b8ebc7845b5e0344901212af, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1567090994}
+          m_TargetAssemblyTypeName: Scene_Manager, Assembly-CSharp
+          m_MethodName: LoadOtherMainLevel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1567090994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567090992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4e03543dcca4543bfc64bdaefbfa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mainScene: 
+  tutorial: 
+  OtherMainScene: Main_Scene_real
+--- !u!4 &1567090995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567090992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 559.2129, y: 261.93185, z: -6.5387783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1870235070
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,10 +1013,15 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -8084326929672149176, guid: 909b9fa70908e0941afe1929a4d1d206, type: 2}
+    value: {fileID: 1567090993}
   m_ExposedReferences:
     m_References:
+    - 845c3dc0336b2ab4ba4d18410632b14c: {fileID: 837139237}
     - 95a4b1809ad873841a7e73059547f0d6: {fileID: 837139237}
+    - 846732dcc69f4434a8e93c0e7635d612: {fileID: 1082647763}
+    - aa11c9a3ffffe3b48a904264161b6cb2: {fileID: 1082647763}
     - f713fb3bf8c4fce4594cbccf289da534: {fileID: 1082647763}
     - 9d45a8db81813e74895f0a7baab83504: {fileID: 1082647763}
 --- !u!4 &2051619645
@@ -965,3 +1049,4 @@ SceneRoots:
   - {fileID: 837139241}
   - {fileID: 1082647767}
   - {fileID: 1870235073}
+  - {fileID: 1567090995}
