@@ -1,8 +1,6 @@
 # Cathy-Climber
-Unity Game where the main character must climbs whats left of the cathedral of learning
+Unity Game where the main character must climbs whats left of the cathedral of learning.
+GamePlay: 10-30 minutes
 
-
-## Currently Working on this... Obv Work in Progress
-
-## estimated completion: april 2025
+## compled: april 29 2025
 
